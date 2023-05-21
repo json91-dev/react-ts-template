@@ -1,0 +1,55 @@
+@import 'responsive.scss';
+@import "components/AppHeader";
+@import "layout/DefaultLayout";
+@import "pages/Main";
+
+@include min-mobile-large {
+  html {
+    font-size: 18px;
+  }
+}
+
+@include min-mobile-medium {
+  html {
+    font-size: 15px;
+  }
+}
+
+@include max-mobile-medium {
+  html {
+    font-size: 13px;
+  }
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #EAEAEA;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  z-index: 100;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+

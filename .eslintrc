@@ -1,0 +1,57 @@
+{
+  // TS를 ESLint 인식할 수 있는 형태 EStree로 변환
+  // 타입스크립트 파서를 사용함
+  "parser": "@typescript-eslint/parser",
+
+  // 코드 포맷을 prettier로 설정
+  "plugins": [
+    "@typescript-eslint", // 타입스크립트 문법에 대해 Linting을 도와주는 패키지
+    "prettier"
+  ],
+  // eslint의 룰을 기본 권장설정으로 설정
+  "extends": [
+    "airbnb", /** eslint eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y 이 포함되어있다. **/
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+
+  // ESLint 룰을 설정
+  "rules": {
+    "no-tabs": "off",
+    "react/function-component-definition": "off",
+    "eslint-disable-next-line": "off",
+    "import/no-unresolved": "off",
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+    "spaced-comment": "off",
+    "import/extensions": "off",
+    "no-unused-vars": "off",
+    "import/order": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "allowSyntheticDefaultImports": "off",
+    "import/no-extraneous-dependencies": "off",
+    "camelcase": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "import/newline-after-import": "off",
+    "no-param-reassign": "warn",
+    "prettier/prettier": "off",
+    "no-undef": "off",
+    "prefer-destructuring": "off",
+    "no-use-before-define": "off",
+    "object-shorthand": "off",
+    "func-names": "off",
+    "react/jsx-curly-brace-presence": "off",
+    "react-hooks/exhaustive-deps": "off"
+  },
+
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "tsconfigRootDir": "."
+  }
+}
+
